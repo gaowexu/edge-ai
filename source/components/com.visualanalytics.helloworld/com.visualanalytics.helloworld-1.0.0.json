@@ -1,0 +1,24 @@
+{
+	"RecipeFormatVersion": "2020-01-25",
+	"ComponentName": "com.visualanalytics.helloworld",
+	"ComponentVersion": "1.0.0",
+	"ComponentDescription": "Hello World from Nvidia Jetson Nano.",
+	"ComponentPublisher": "Me",
+	"Manifests": [
+		{
+			"Name": "Linux",
+			"Platform": {
+				"os": "linux"
+			},
+			"Lifecycle": {
+				"Install": "pip3 install numpy && pip3 install boto3",
+				"Run": "python3 {artifacts:path}/hello_world.py"
+			},
+			"Artifacts": [
+				{
+					"Uri": "s3://visualanalytics/artifacts/com.visualanalytics.helloworld/1.0.0/hello_world.py"
+				}
+			]
+		}
+	]
+}
